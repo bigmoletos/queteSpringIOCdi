@@ -8,8 +8,8 @@ package com.wildcodeschool.myLibrary.models;
  * @author franck Desmedt github/bigmoletos
  *
  */
-public interface Book {
-	public String readExtract();
-
-	public String displayDrinkAdvice();
+public class ServiceWhatever {
+	public String speak() {
+		return "Whatever !";
+	}
 }
