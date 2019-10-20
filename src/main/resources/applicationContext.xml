@@ -10,15 +10,27 @@
 	<!-- Bean of the dependency -->
 	<!-- <bean id="myDrinkAdvice" class="com.wildcodeschool.myLibrary.models.CosyDrinkAdvice"> -->
 	<!-- </bean> -->
-	<bean id="myDrinkAdvice"
-		class="com.wildcodeschool.myLibrary.models.AdventurousDrinkAdvice">
-	</bean>
-	<!-- Bean of the book -->
-	<bean id="theBook"
-		class="com.wildcodeschool.myLibrary.models.ScienceFictionBook">
-		<!-- Injection in the constructor : -->
-		<constructor-arg ref="myDrinkAdvice" />
-	</bean>
+<!-- 	******************* -->
+	<!-- Bean of the dependency -->
+    <bean id="myDrinkAdvice" class="com.wildcodeschool.myLibrary.models.CosyDrinkAdvice">
+    </bean>
 
+    <!-- Bean of the book -->
+    <bean id="theBookFantasy" class="com.wildcodeschool.myLibrary.models.ScienceFictionBook">
+        <!-- Injection in the constructor : -->
+        <constructor-arg ref="myDrinkAdvice"/>
+    </bean>
+	
+	
+	
+<!-- 	***************** -->
+	 <bean id="myDrinkAdviceAdventurous" class="com.wildcodeschool.myLibrary.models.AdventurousDrinkAdvice">
+    </bean>
+
+<!--     Bean of the book -->
+    <bean id="theBookScience" class="com.wildcodeschool.myLibrary.models.ScienceFictionBook">
+<!--         Injection in the constructor : -->
+        <constructor-arg ref="myDrinkAdvice"/>
+    </bean>
 
 </beans>
